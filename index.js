@@ -37,7 +37,21 @@ function appMenu() {
                 return 'Please enter at least one character.';
             },
         },
+        {
+            type: 'input',
+            name: 'managerID',
+            message: 'What is your Managers ID?',
+            validate: (answer) => {
+                const pass = answer.match(/^[1-9]\d*$/);
+                if (pass) {
+                    return true;
+                }
+                return "Please enter a number greater than zero.";
+            },
+        },
+        {
             
+        }
         ])
     }
 }
