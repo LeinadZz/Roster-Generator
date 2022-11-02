@@ -15,7 +15,8 @@ console.log('Welcome to the Team Generator !');
 function appMenu() {
     function createTeam() {
         console.log("Lets create your team !")
-        inquirer.prompt([{
+        inquirer.prompt([
+        {
             type: 'input',
             name: "teamName",
             message: "What is your teams name?",
@@ -50,8 +51,17 @@ function appMenu() {
             },
         },
         {
-            
-        }
+            type: 'input',
+            name: 'managerEmail',
+            message: 'What is your Managers email?',
+            validate: (answer) => {
+                const pass = answer.match(/^\S+@\S+\.\S+$/);
+                if (pass) {
+                    return true;
+                }
+                return "Please enter a valid email address.";
+            },
+        },
         ])
     }
 }
