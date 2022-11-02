@@ -62,6 +62,18 @@ function appMenu() {
                 return "Please enter a valid email address.";
             },
         },
+        {
+            type: 'input',
+            name: 'officeNumber',
+            message: "What is your manager's office number?",
+            validate: (answer) => {
+                const pass = answer.match(/^[1-9]\d*$/);
+                if (pass) {
+                    return true;
+                }
+                return "Please enetr a number greater than zero."
+            },
+        },
         ])
     }
 }
