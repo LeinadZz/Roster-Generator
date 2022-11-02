@@ -27,8 +27,17 @@ function appMenu() {
             },
         },
         {
+            type: 'input',
+            name: 'managerName',
+            message: 'What is the name of your Manager?',
+            validate: (answer) => {
+                if (answer !== '') {
+                    return true;
+                }
+                return 'Please enter at least one character.';
+            },
+        },
             
-        }
         ])
     }
 }
