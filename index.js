@@ -201,6 +201,18 @@ function appMenu() {
                     return 'Please enter a valid email address.'
                 },
             },
+            {
+                type: 'input',
+                name: 'internSchool',
+                message: "What school does your Intern go to?",
+                validate: (answer) => {
+                    if (answer !== '') {
+                        return true;
+                    }
+                    return 'Please enter atleast one character';
+                }
+            }
         ])
+
     }
 }
