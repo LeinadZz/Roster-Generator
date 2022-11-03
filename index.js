@@ -6,6 +6,7 @@ const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
 
 const render = require("./src/htmlRenderer");
+const { create } = require("domain");
 
 const teamMembers = [];
 const idArray = [];
@@ -150,5 +151,16 @@ function appMenu() {
                 }
             }
         ])
+        .then((answers) => {
+            const engineer = new Engineer(
+                answers.engineerName,
+                answers.engineerID,
+                answers.engineerEmail,
+                answers.engineerGithub
+            );
+            teamMembers.push(engineer);
+            idArray.push(answers.engineerID);
+            createTeam();
+        });
     }
 }
