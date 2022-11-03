@@ -213,6 +213,16 @@ function appMenu() {
                 }
             }
         ])
-
+        .then((answers) => {
+            const intern = new Intern(
+            answers.internName,
+            answers.internID,
+            answers.internEmail,
+            answers.internSchool,
+            );
+            teamMembers.push(intern);
+            idArray.push(answers.internID);
+            createTeam();
+        })
     }
 }
