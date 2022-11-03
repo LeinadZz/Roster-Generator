@@ -178,8 +178,17 @@ function appMenu() {
                 },
             },
             {
-                
-            }
+                type: 'input',
+                name: 'internID',
+                message: "What is your Intern's ID?",
+                validate: (answer) => {
+                    const pass = answer.match(/^[1-9]\d*$/);
+                    if (pass) {
+                        return true;
+                    }
+                    return 'Please enter a number greater than 0';
+                },
+            },
         ])
     }
 }
