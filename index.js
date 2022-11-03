@@ -90,5 +90,14 @@ function appMenu() {
                 ],
             },
         ])
+        .then((userChoice) => {
+            switch (userChoice.memberChoice) {
+                case 'Engineer': addEngineer();
+                break;
+                case 'Intern': addIntern();
+                break;
+                default: buildTeam();
+            }
+        })
     }
 }
