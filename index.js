@@ -98,6 +98,25 @@ function appMenu() {
                 break;
                 default: buildTeam();
             }
-        })
+        });
+    }
+
+    function addEngineer() {
+        inquirer.prompt([
+            {
+                type: 'input',
+                name: 'engineerName',
+                message: "What is your Engineer's name?",
+                validate: (answer) => {
+                    if (answer !== '') {
+                        return true;
+                    }
+                    return 'Please enter atleast one character';
+                },
+            },
+            {
+                
+            }
+        ])
     }
 }
