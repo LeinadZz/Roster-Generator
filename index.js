@@ -13,20 +13,9 @@ const idArray = [];
 console.log('Welcome to the Team Generator !');
 
 function appMenu() {
-    function createTeam() {
-        console.log("Lets create your team !")
+    function createManager() {
+        console.log("Time to create your team ! Let's start off with your Manager.")
         inquirer.prompt([
-        {
-            type: 'input',
-            name: "teamName",
-            message: "What is your teams name?",
-            validate: (answer) => {
-                if (answer !== '') {
-                    return true;
-                }
-                return 'Please enter at least one character.';
-            },
-        },
         {
             type: 'input',
             name: 'managerName',
@@ -75,5 +64,16 @@ function appMenu() {
             },
         },
         ])
+        .then((answers) => {
+            const manager = new Manager(
+                answers.managerName,
+                answers.managerID,
+                answers.managerEmail,
+                answers.officeNumber
+            );
+            teamMembers.push(manager);
+            idArray.push(answers.managerID);
+            createTeam();
+        });
     }
 }
