@@ -76,4 +76,19 @@ function appMenu() {
             createTeam();
         });
     }
+
+    function createTeam() {
+        inquirer.prompt([
+            {
+                type: 'list',
+                name: 'newMember',
+                message: 'Which type of member would you like to add to your team?',
+                choices: [
+                    'Engineer',
+                    'Intern',
+                    'None',
+                ],
+            },
+        ])
+    }
 }
