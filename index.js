@@ -1,7 +1,5 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
-const Handlebars = require("handlebars");
-const template = Handlebars.compile("Name: {{name}}");
 const path = require("path");
 const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
@@ -13,7 +11,6 @@ const { create } = require("domain");
 const teamMembers = [];
 const idArray = [];
 
-console.log(template({ name: "Daniel"}));
 console.log('Welcome to the Team Generator !');
 
 function appMenu() {
