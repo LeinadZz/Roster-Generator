@@ -163,4 +163,23 @@ function appMenu() {
             createTeam();
         });
     }
+
+    function addIntern() {
+        inquirer.prompt([
+            {
+                type: 'input',
+                name: 'internName',
+                message: "What is your Intern's name?",
+                validate: (answer) => {
+                    if (answer !== '') {
+                        return true;
+                    }
+                    return 'Please enter atleast one character.';
+                },
+            },
+            {
+                
+            }
+        ])
+    }
 }
