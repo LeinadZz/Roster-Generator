@@ -138,6 +138,17 @@ function appMenu() {
                     return 'Please enter a valid email address.'
                 },
             },
+            {
+                type: 'input',
+                name: 'engineerGithub',
+                message: "What is your Engineer's Github?",
+                validate: (answer) => {
+                    if (answer !== '') {
+                        return true;
+                    }
+                    return 'Please enter atleast one character';
+                }
+            }
         ])
     }
 }
