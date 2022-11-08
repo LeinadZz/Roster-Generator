@@ -1,0 +1,28 @@
+{
+  "name": "roster-generator",
+  "version": "1.0.0",
+  "description": "Application that allows you to build your roster",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LeinadZz/Roster-Generator.git"
+  },
+  "author": "Daniel Gutierrez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LeinadZz/Roster-Generator/issues"
+  },
+  "homepage": "https://github.com/LeinadZz/Roster-Generator#readme",
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "inquirer": "^8.0.0",
+    "path": "^0.12.7"
+  }
+}

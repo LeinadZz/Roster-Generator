@@ -54,7 +54,7 @@ function appMenu() {
         },
         {
             type: 'input',
-            name: 'officeNumber',
+            name: 'managerOfficeNumber',
             message: "What is your manager's office number?",
             validate: (answer) => {
                 const pass = answer.match(/^[1-9]\d*$/);
@@ -70,7 +70,7 @@ function appMenu() {
                 answers.managerName,
                 answers.managerID,
                 answers.managerEmail,
-                answers.officeNumber
+                answers.managerOfficeNumber
             );
             teamMembers.push(manager);
             idArray.push(answers.managerID);
