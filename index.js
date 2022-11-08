@@ -8,6 +8,9 @@ const Intern = require("./lib/Intern");
 const render = require("./src/htmlRenderer");
 const { create } = require("domain");
 
+const DIST_DIR = path.resolve(__dirname, 'dist');
+const distPath = path.join(DIST_DIR, 'Main.html');
+
 const teamMembers = [];
 const idArray = [];
 
@@ -92,7 +95,7 @@ function appMenu() {
             },
         ])
         .then((userChoice) => {
-            switch (userChoice.memberChoice) {
+            switch (userChoice.newMember) {
                 case 'Engineer': addEngineer();
                 break;
                 case 'Intern': addIntern();

@@ -54,7 +54,7 @@ const generateTeam = team => {
         `;
     };
 
-    const htmlPage = [];
+    const html = [];
 
     html.push(team
         .filter(employee => employee.getRole() === "Manager")
